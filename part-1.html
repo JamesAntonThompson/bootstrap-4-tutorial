@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <style>
+        hr {                        /* Put a margin above each Horizontal Row */
+            margin-top: 50px;
+        }
+
+        h1 { margin-top: 25px;}
+        h2 { margin-top: 25px;}
+
     	.my-div { width: 200px;
     			  height: 200px;
     			  display: inline-block;   /* This arranges the divs to be next to each other */
@@ -33,10 +40,15 @@
     		/* border: 1px solid black; */
     	}
 
-    	@media(min-width: 576px) { .my-div-3: { background-color: cyan; }}
-    	@media(min-width: 768px) { .my-div-3: { background:yellow; }}
-    	@media(min-width: 992px) { .my-div-3: { background:grey; }}
-    	@media(min-width: 1200px) { .my-div-3: { background-color: blue; }}
+    	@media(min-width: 576px) { .my-div-3 { background-color: chocolate; }}
+    	@media(min-width: 768px) { .my-div-3 { background-color: cadetblue; }}
+    	@media(min-width: 992px) { .my-div-3 { background-color: gray; }}
+    	@media(min-width: 1200px) { .my-div-3 { background-color: palevioletred; }}
+
+        .my-div-4 {
+            /*margin-top:20px;*/
+            border: 1px solid black;
+        }
 
     </style>
 
@@ -133,7 +145,7 @@
     <hr />
 	<div class="container">
 		<h1>3. Media Breakpoints</h1>
-		<p>There are several media breakpoints defined in Bootstrap 4. This are:</p>
+		<p>There are several media breakpoints defined in Bootstrap 4. The key ones are:</p>
 		<ul>
 			<li>XL = min width:1200px</li>
 			<li>LG = min width:992px</li>
@@ -143,10 +155,77 @@
 		</ul>
 		<div class="row">
 			<div class="col my-div-3" id="3-3">
-				<p>This div changes background colour depending upon the width of the viewport</p>
+				<p>This div changes background colour depending upon the width of the viewport using the @media callouts in the css.</p>
 			</div>
 		</div>
 	</div>
+    <hr />
+    <div class="container">
+        <h1>4. The Bootstrap Grid System</h1>
+        <p>Let's start with a simple row with four columns</p>
+        <section class="row">
+            <div class="col bg-info my-div-4">Column 1</div>
+            <div class="col bg-info my-div-4">Column 2</div>
+            <div class="col bg-info my-div-4">Column 3</div>
+            <div class="col bg-info my-div-4">Column 4</div>
+        </section>
+        <p>If we use the w-100 class in one of the columns, it specifies that the width of the column should be 100% of the available area and everything else has to wrap around it</p>
+        <div class="row">
+            <div class="col bg-info my-div-4">Column 1</div>
+            <div class="col bg-info my-div-4">Column 2</div>
+            <div class="w-100 bg-info my-div-4">Column 3</div>
+            <div class="col bg-info my-div-4">Column 4</div>
+        </div>
+        <p>
+            If we specify the number of column-spaces that a given column should occupy, then Bootstrap will automatically evenly distribute the remaining columns.
+            In this instance, we specify the 2nd column to be col-6. So the other columns all are set to a width of 2
+        </p>
+        <section class="row">
+            <div class="col bg-info my-div-4">Column 1</div>
+            <div class="col-6 bg-info my-div-4">Column 2</div>
+            <div class="col bg-info my-div-4">Column 3</div>
+            <div class="col bg-info my-div-4">Column 4</div>
+        </section>
+        <h2>Using media breakpoints to manage the display of columns</h2>
+        <p>If we specify the media size (in this case by using col-sm) we specify the size of the column at that media size. In this case, by saying col-sm, we are saying to use 100% width at small media size. This will stack the columns.</p>
+        <section class="row">
+            <div class="col-sm bg-info my-div-4">Column 1</div>
+            <div class="col-sm bg-info my-div-4">Column 2</div>
+            <div class="col-sm bg-info my-div-4">Column 3</div>
+            <div class="col-sm bg-info my-div-4">Column 4</div>
+        </section>
+        <h2>Re-ordering Columns</h2>
+        <p>It is possible to specify the order of columns displayed in a row, independently of the default flow in the HTML document. In this case, we have jumbled the order of the columns using the order-[n] classes.</p>
+        <section class="row">
+            <div class="col bg-info order-4 my-div-4">Column 1</div>
+            <div class="col bg-info order-3 my-div-4">Column 2</div>
+            <div class="col bg-info order-2 my-div-4">Column 3</div>
+            <div class="col bg-info order-1 my-div-4">Column 4</div>
+        </section>
+        <h2>Nesting Columns</h2>
+        <p>It is possible to nest rows within rows. In this example, we have a column of width 8 (class col-8) and within it is another row, with three evenly-spaced columns</p>
+        <section class="row">
+            <div class="col-8 bg-info my-div-4">
+                Column 1
+                <div class="row">
+                    <div class="col bg-info my-div-4">Column 2</div>
+                    <div class="col bg-info my-div-4">Column 3</div>
+                    <div class="col bg-info my-div-4">Column 4</div>
+                </div>
+            </div>
+        </section>
+        <h2>Resizing Columns based on media breakpoints</h2>
+        <p>Columns can be re-sized based on the media breakpoints. In this instance, we use the col-sm-10, col-md-8, col-lg-6 and col-xl-4 classes to have the column have proportionally less width as the viewport expands</p>
+        <section class="row">
+            <div class="col-sm-10 col-md-8 col-lg-6 col-xl-4 bg-info my-div-4">Column 1</div>
+        </section>
+    </div>
+    <hr />
+    <div class="container">
+        <h1>5. Alignment and Offsets</h1>
+        <p>Note that styling used in this section includes Bootstrap classes introduced in previous sections. Review those sections for an understanding of what is going on.</p>
+
+    </div>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
