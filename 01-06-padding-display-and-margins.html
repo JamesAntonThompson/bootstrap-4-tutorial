@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Padding and Margins</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        hr {                        /* Put a margin above each Horizontal Row */
+            margin-top: 50px;
+        }
+
+        h1 { margin-top: 25px;}
+        h2 { margin-top: 25px;}
+
+        .note { margin-bottom: 0px; margin-top: 16px;}
+
+        .my-row { height: 100px; }
+    	/*.my-div { height: 150px; }*/
+
+ 
+ 
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Padding, Display and Margins</h1>
+        <h2>Padding and Margins</h2>
+        <p class="note">The way margins work inside bootstrap is that the different sizes reflect differet orders of magnitude relative to the size of the Sass Map Variable $spacer, which has a default size the same as the font size. So,</p>
+        <p class="note">0 = 0 x font</p>
+        <p class="note">1 = 0.25 x font</p>
+        <p class="note">2 = 0.5 x font</p>
+        <p class="note">3 = 1.0 x font</p>
+        <p class="note">4 = 1.5 x font</p>
+        <p class="note">5 = 3 x font</p>
+        <p class="note">Bootstrap pading and margin classes use the following nomenclature: t = top, b = bottom, l = left, r = right. x = left and right, y = top and bottom, blank = all</p>
+        <p class="note">The grid below can be used to illustrate how padding and margins work.</p>
+        <div class="row my-row">
+            <div class="col bg-white">1</div>
+            <div class="col bg-info">2</div>
+            <div class="col bg-white">3</div>
+        </div>
+        <div class="row my-row">
+            <div class="col bg-info">4</div>
+            <div class="col bg-primary">Here is some content that will have padding and margins around it.</div>
+            <div class="col bg-info">6</div>
+        </div>
+        <div class="row my-row">
+            <div class="col bg-white">7</div>
+            <div class="col bg-info">8</div>
+            <div class="col bg-white">9</div>
+        </div>
+
+        <p class="note">The grid below applies the margin-top-5 <strong>mt-5</strong> class to the central column.</p>
+        <div class="row my-row">
+            <div class="col bg-white">1</div>
+            <div class="col bg-info">2</div>
+            <div class="col bg-white">3</div>
+        </div>
+        <div class="row my-row">
+            <div class="col bg-info">4</div>
+            <div class="col bg-primary mt-5">Here is some content that will have padding and margins around it.</div>
+            <div class="col bg-info">6</div>
+        </div>
+        <div class="row my-row">
+            <div class="col bg-white">7</div>
+            <div class="col bg-info">8</div>
+            <div class="col bg-white">9</div>
+        </div>
+
+        <p class="note">The grid below applies the margin of 3 all the way around, by applying <strong>m-3</strong> class to the central column.</p>
+        <div class="row my-row">
+            <div class="col bg-white">1</div>
+            <div class="col bg-info">2</div>
+            <div class="col bg-white">3</div>
+        </div>
+        <div class="row my-row">
+            <div class="col bg-info">4</div>
+            <div class="col bg-primary m-3">Here is some content that will have padding and margins around it.</div>
+            <div class="col bg-info">6</div>
+        </div>
+        <div class="row my-row">
+            <div class="col bg-white">7</div>
+            <div class="col bg-info">8</div>
+            <div class="col bg-white">9</div>
+        </div>
+    </div>
+    <hr />
+    <div class="container">
+        <h2>Display classes</h2>
+        <p class="note">It is possible to assign the block / inline attributes of an html element, even if its default behaviour is nominally a block or inline. Let's start with two span (inline) elements and two div (block) elements</p>
+        <span class="px-2 bg-warning">This is a span inline element</span>
+        <span class="px-2 bg-secondary">This is another span inline element</span>
+        <div class="bg-info">This is a div block element</div>
+        <div class="bg-info">This is another div block element</div>
+        <p class="note">We can assign an inline element to behave as a block using the <strong>d-block</strong>class. This has been applied to the first span element.</p>
+        <span class="px-2 bg-warning d-block">This is a span inline element</span>
+        <span class="px-2 bg-secondary">This is another span inline element</span>
+        <div class="bg-info">This is a div block element</div>
+        <div class="bg-info">This is another div block element</div>
+        <p class="note">We can also assign a block element to behave as an in-line element using the <strong>d-inline</strong> class. This has now been applied to the two div elements below</p>
+        <span class="px-2 bg-warning d-block">This is a span inline element</span>
+        <span class="px-2 bg-secondary">This is another span inline element</span>
+        <div class="bg-info d-inline">This is a div block element</div>
+        <div class="bg-info d-inline">This is another div block element</div>
+    </div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

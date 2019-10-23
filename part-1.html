@@ -22,6 +22,8 @@
     			  margin: 10px;
     			}
 
+        .note { margin-bottom: 0px; margin-top: 16px;}
+
     	.my-div2
     	{
     		height: 200px;
@@ -51,50 +53,13 @@
         }
 
         .my-div-5 {
-            height: 50px;
+            height: 150px;
         }
 
     </style>
 
 </head>
 <body>
-	<div style="background-color: #eeeeee;">
-		<div>
-			<h1>1. Background Colours</h1>
-			<p>There are 9 standard colours in Bootstrap 4. Bootstrap does not call colours by their names, but instead gives them labels. The bg-[] syntax is used to create backgrounds using these colours</p>
-		</div>
-		<div>
-			<div class="my-div bg-primary">
-				<p>bg-primary</p>
-			</div>
-			<div class="my-div bg-secondary">
-				<p>bg-seconday</p>
-			</div>
-			<div class="my-div bg-success">
-				<p>bg-success</p>
-			</div>
-			<div class="my-div bg-danger">
-				<p>bg-danger</p>
-			</div>
-			<div class="my-div bg-warning">
-				<p>bg-warning</p>
-			</div>
-			<hr>
-			<div class="my-div bg-info">
-				<p>bg-info</p>
-			</div>
-			<div class="my-div bg-dark text-light">
-				<p>bg-dark</p>
-			</div>
-			<div class="my-div bg-white">
-				<p>bg-white</p>
-			</div>
-			<div class="my-div bg-transparent">
-				<p>bg-transparent</p>
-			</div>
-		</div>
-	</div>
-	<hr>
 	<!----------------------------------------------------->
 	<h1>2. Containers and Rows</h1>
 	<h2>Containers</h2>
@@ -247,25 +212,60 @@
             <div class="col-sm bg-primary my-div-5">Column 2</div>
             <div class="col-sm bg-info my-div-5">Column 3</div>
         </div>
-        <p>
-            In the previous examples, we set alignment at the level of the row. It is also possible to set alignment for an element within a row. In this example, we use the <strong>align-self-start</strong>, <strong>align-self-center</strong> and <strong>align-self-end</strong> classes to align the columns
-            <div class="row bg-warning" style="height:150px;">
-                <div class="col-sm align-self-start bg-secondary my-div-5">Column 1</div>
-                <div class="col-sm align-self-center bg-primary my-div-5">Column 2</div>
-                <div class="col-sm align-self-end bg-info my-div-5">Column 3</div>
-            </div>
-            <h2>Offsets</h2>
-        <p>If we have an row, we can specify the width of each of the columns. If the sum of these widths does not add up to 12, then a blank area is viewable.</p>
-        <p>In this case, we utilise the <strong>col-sm</strong> class to specify that the columns are 100% width at a small viewport. However, we also specify that the two columns are </p>
+        <p>In the previous examples, we set alignment at the level of the row. It is also possible to set alignment for an element within a row. In this example, we use the <strong>align-self-start</strong>, <strong>align-self-center</strong> and <strong>align-self-end</strong> classes to align the columns</p>
+        <div class="row bg-warning" style="height:150px;">
+            <div class="col-sm align-self-start bg-secondary my-div-5">Column 1</div>
+            <div class="col-sm align-self-center bg-primary my-div-5">Column 2</div>
+            <div class="col-sm align-self-end bg-info my-div-5">Column 3</div>
+        </div>
+        <h2>Offsets</h2>
+        <p class="note">
+            If we have an row, we can specify the width of each of the columns. If the sum of these widths does not add up to 12, then a blank area is viewable.
+            In this case, we utilise the <strong>col-sm</strong> class to specify that the columns are 100% width at a small viewport. However, we also specify that the two columns are
+        </p>
         <div class="row bg-secondary" style="height:150px;">
             <div class="col-sm col-md-4 bg-info my-div-5">Column 1</div>
             <div class="col-sm col-md-4 bg-primary my-div-5">Column 2</div>
         </div>
-        <p>In this case, we utilise the <strong>col-sm</strong> class to specify that the columns are 100% width at a small viewport. However, we also specify that the two columns are centered in the row using the <strong>justify-content-center</strong> class</p>
+        <p class="note">In this case, we utilise the <strong>col-sm</strong> class to specify that the columns are 100% width at a small viewport. However, we also specify that the two columns are centered in the row using the <strong>justify-content-center</strong> class</p>
         <div class="row bg-secondary justify-content-center" style="height:150px;">
             <div class="col-sm col-md-4 bg-info my-div-5">Column 1</div>
             <div class="col-sm col-md-4 bg-primary my-div-5">Column 2</div>
         </div>
+        <p class="note">And in this case, we specify that the two columns are aligned to the right of the row using the <strong>justify-content-end</strong> class</p>
+        <div class="row bg-secondary justify-content-end" style="height:150px;">
+            <div class="col-sm col-md-4 bg-info my-div-5">Column 1</div>
+            <div class="col-sm col-md-4 bg-primary my-div-5">Column 2</div>
+        </div>
+        <p class="note">And in this case, we specify that the two columns are aligned evenly across the row, using <strong>justify-content-around</strong> class</p>
+        <div class="row bg-secondary justify-content-around" style="height:150px;">
+            <div class="col-sm col-md-4 bg-info my-div-5">Column 1</div>
+            <div class="col-sm col-md-4 bg-primary my-div-5">Column 2</div>
+        </div>
+        <p class="note">And finally, in this case, we specify that the two columns are to the left and right ends using <strong>justify-content-between</strong> class</p>
+        <div class="row bg-secondary justify-content-between" style="height:150px;">
+            <div class="col-sm col-md-4 bg-info my-div-5">Column 1</div>
+            <div class="col-sm col-md-4 bg-primary my-div-5">Column 2</div>
+        </div>
+        <p class="note">Another way to do offsets is to offset the columns themsleves, as opposed to selecting a <strong>justify-content-*</strong> class. In the example below, we use the <strong>offset-md-2</strong> class to move the second column two additional colums to the right</p>
+        <div class="row bg-secondary" style="height:150px;">
+            <div class="col-sm col-md-4 bg-info my-div-5">Column 1</div>
+            <div class="col-sm col-md-4 offset-md-2 bg-primary my-div-5">Column 2</div>
+        </div>
+        <p class="note">
+            Another way to do offsets is through the margin-left class. Here, we assign the <strong>ml-auto</strong> class to the first column, causing the columns to be moved to the right
+            because ml-auto creates the maximum margin to the left of the first column
+        </p>
+        <div class="row bg-secondary" style="height:150px;">
+            <div class="col-sm col-md-4 ml-auto bg-info my-div-5">Column 1</div>
+            <div class="col-sm col-md-4 bg-primary my-div-5">Column 2</div>
+        </div>
+        <p class="note">The reverse is true when we use a <strong>mr-auto</strong> class. It creates the maximum margin to the right of the column</p>
+        <div class="row bg-secondary" style="height:150px;">
+            <div class="col-sm col-md-4 mr-auto bg-info my-div-5">Column 1</div>
+            <div class="col-sm col-md-4 bg-primary my-div-5">Column 2</div>
+        </div>
+
     </div>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
