@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A Navbar built by hand</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <style>
+        header.masthead {
+            text-align: left;
+            color: black;
+            background-image: url('background.jpg');
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-position: center center;
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body id="top">    
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a href="#top">Navbar</a>                                       <!-- The idea here is that the nav will link itself to the top of the page -->
+            <button>Menu <i class="fa fa-bars"></i></button>                <!-- fa-bars is the Font-Awesome hamburger menu -->
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#link1">Link 1</a></li>        <!-- js-scroll-trigger is bootstrap js that animates the scrolling over the links -->
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#link2">Link 2</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#link3">Link 3</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#link4">Link 4</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#link5">Link 5</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!------------------------------------------------------------------------------------------------------------------------------->
+
+    <header class="masthead">
+        <div class="container">
+            <div class="intro-text">
+                <h1 class="pt-5">Hand-Built Menu Iteration 2</h1>
+                <p>In this iteration we add a <strong>navbar-nav</strong> class to the ul element which formats the links</p>
+                <p>We also add <strong>text-uppercase</strong> and <strong>ml-auto</strong> classes</p>
+                <p>In the div above the ul, we add <strong>collapse</strong> and <strong>navbar-collapse</strong></p>
+                <p>We also add an id of <strong>navbarResponsive</strong> which will be used in by the javascript</p>
+                <p>In the nav element, we add <strong>navbar</strong> and <strong>navbar-expand-lg</strong> which turns the list into a horizontal navbar and has it be expanded with the screen width is large</p>
+                <p>In the nav element, we also add <strong>navbar-light</strong> to set it to be dark colours and and <strong>fixed-top</strong> to have it fixed to the top of the viewport</p>
+            </div>
+        </div>
+    </header>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
