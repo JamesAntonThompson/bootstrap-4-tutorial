@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flexible Box</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        hr {                        /* Put a margin above each Horizontal Row */
+            margin-top: 50px;
+        }
+
+        h1 { margin-top: 25px;}
+        h2 { margin-top: 25px;}
+
+        .note { margin-bottom: 0px; margin-top: 16px;}  
+
+        .my-div { border: 1px solid green; }
+        .my-section { background: #f1f1f1; height: 200px; }
+    </style>
+
+</head>
+<body>
+    <aside class="container">
+        <h1>Flexible Boxes</h1>
+        <h2>Flex Rows</h2>
+        <p class="note">In order to utilise flex-box attributes, the class <strong>d-flex</strong> needs to be applied to the element to be displayed as flex. We have also applied the <strong>flex-row</strong> class to have the elements organised as a row.</p>
+        <section class="d-flex flex-row my-section">
+            <div class="p-4 my-div">My Flex Box 1</div>
+            <div class="p-4 my-div">My Flex Box 2</div>
+            <div class="p-4 my-div">My Flex Box 3</div>
+        </section>
+        <p class="note">The class <strong>flex-row-reverse</strong> can be used to reverse (right align) the flex. Note that it also reverse the order of the elements in the flex.</p>
+        <section class="d-flex flex-row-reverse my-section">
+            <div class="p-4 my-div">My Flex Box 1</div>
+            <div class="p-4 my-div">My Flex Box 2</div>
+            <div class="p-4 my-div">My Flex Box 3</div>
+        </section>
+        <p class="note">The flex classes can be used in conjunction with the justify-content-* classes, such as <strong>justify-content-center</strong> shown here.</p>
+        <section class="d-flex flex-row justify-content-center my-section">
+            <div class="p-4 my-div">My Flex Box 1</div>
+            <div class="p-4 my-div">My Flex Box 2</div>
+            <div class="p-4 my-div">My Flex Box 3</div>
+        </section>
+        <p class="note">This example utilises a number of different alignment classes in a single flex. In this case, these are applied for medium size screens and above only</p>
+        <section class="d-flex flex-row justify-content-center my-section">
+            <div class="p-4 align-self-md-start my-div">My Flex Box 1</div>
+            <div class="p-4 align-self-md-center my-div">My Flex Box 2</div>
+            <div class="p-4 align-self-md-end my-div">My Flex Box 3</div>
+            <div class="p-4 align-self-md-baseline h2 my-div">My Flex Box 4</div>
+            <div class="p-4 align-self-md-stretch my-div">My Flex Box 5</div>
+        </section>
+        <h2>Flex Columns</h2>
+        <p>It is also possible to use a flex to arrange elements into a column, using the <strong>flex-column</strong> class.</p>
+        <section class="d-flex flex-column my-section">
+            <div class="p-4 my-div">My Flex Box 1</div>
+            <div class="p-4 my-div">My Flex Box 2</div>
+            <div class="p-4 my-div">My Flex Box 3</div>
+        </section>
+    </aside>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

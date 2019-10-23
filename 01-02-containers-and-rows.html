@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Containers and Rows</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        hr {                        /* Put a margin above each Horizontal Row */
+            margin-top: 50px;
+        }
+
+        h1 { margin-top: 25px;}
+        h2 { margin-top: 25px;}
+        .note { margin-bottom: 0px; margin-top: 16px;}
+
+    	.my-div2
+    	{
+    		height: 200px;
+    		width: 100%;			/* This sets the width to be 100% of the available space */    		
+    		background: url('fish.jpg') no-repeat center center;
+    		background-size: cover;
+    	}
+
+    	.my-div-2-2 {
+    		height: 100px;
+    		border: 1px solid black;
+    	}        
+
+    </style>
+
+</head>
+<body>
+	<h1>2. Containers and Rows</h1>
+	<h2>Containers</h2>
+	<div class="my-div2 bg-primary">
+		<p>This div sits outside a container and is set to width:100%, meaning it takes up the entire viewport. As the width of the viewport changes, it adjusts smoothly</p>
+	</div>
+	<hr>
+	<div class="my-div2 container bg-secondary">
+		<p>This div sits inside a container and is set to width:100%, meaning it takes up the entire area of the container. As the width of the viewport changes, it adjusts in increments reflecting sizing breakpoints</p>
+	</div>
+	<hr>
+	<div class="my-div2 container-fluid bg-success">
+		<p>This div sits inside a container-fluid and is set to width:100%, meaning it takes up the entire area of the container. As the width of the viewport changes, it adjusts smoothly</p>
+	</div>
+	<hr>
+	<div class="container">
+		<h2>2.2. Rows</h2>
+		<p class="note">Bootstrap works on a 12 column grid system. the 'col' class, used within a 'row' class is the basic mechanism by which this is managed</p>
+		<div class="row">
+			<div class="my-div-2-2 col bg-secondary">
+				<p>A single column</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="my-div-2-2 col bg-secondary">
+				<p>A two column layout</p>
+			</div>
+			<div class="my-div-2-2 col bg-secondary">
+				<p>A two column layout</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="my-div-2-2 col bg-secondary"><p>A three column layout</p></div>
+			<div class="my-div-2-2 col bg-secondary"><p>A three column layout</p></div>
+			<div class="my-div-2-2 col bg-secondary"><p>A three column layout</p></div>
+		</div>
+		<div class="row">
+			<div class="my-div-2-2 col bg-secondary"><p>A twelve column layout</p></div>
+			<div class="my-div-2-2 col bg-secondary"><p>A twelve column layout</p></div>
+			<div class="my-div-2-2 col bg-secondary"><p>A twelve column layout</p></div>
+			<div class="my-div-2-2 col bg-secondary"><p>A twelve column layout</p></div>
+			<div class="my-div-2-2 col bg-secondary"><p>A twelve column layout</p></div>
+			<div class="my-div-2-2 col bg-secondary"><p>A twelve column layout</p></div>
+			<div class="my-div-2-2 col bg-secondary"><p>A twelve column layout</p></div>
+			<div class="my-div-2-2 col bg-secondary"><p>A twelve column layout</p></div>
+			<div class="my-div-2-2 col bg-secondary"><p>A twelve column layout</p></div>
+			<div class="my-div-2-2 col bg-secondary"><p>A twelve column layout</p></div>
+			<div class="my-div-2-2 col bg-secondary"><p>A twelve column layout</p></div>
+			<div class="my-div-2-2 col bg-secondary"><p>A twelve column layout</p></div>
+		</div>
+	</div>
+    
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
