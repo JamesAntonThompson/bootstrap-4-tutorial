@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Colours</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <style>
+        header.masthead {
+            text-align: left;
+            color: black;            
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-position: center center;
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body id="top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#top">Navbar</a>                                       <!-- The idea here is that the nav will link itself to the top of the page -->
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle">Menu <i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" id="navDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Basic Design and Responsive Layout</a>
+                        <div class="dropdown-menu" aria-labelledby="navDropdown">
+                            <a class="dropdown-item" href="01-01-bootstrap-background-colours.html">Background Colours</a>
+                            <a class="dropdown-item" href="01-02-containers-and-rows.html">Containers and Rows</a>
+                            <a class="dropdown-item" href="01-03-media-breakbpoints.html">Media Breakpoints</a>
+                            <a class="dropdown-item" href="01-04-the-bootstrap-grid-system.html">The Bootstrap Grid System</a>
+                            <a class="dropdown-item" href="01-05-alignment-and-offsets.html">Alignment and Offsets</a>
+                            <a class="dropdown-item" href="01-06-padding-display-and-margins.html">Padding Display and Margins</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="01-07-flexible-box.html">Flexible Box</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" id="navDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Typeography</a>
+                        <div class="dropdown-menu" aria-labelledby="navDropdown">
+                            <a class="dropdown-item" href="03-01-headlines.html">Headlines</a>
+                            <a class="dropdown-item" href="03-02-cases.html">Cases</a>
+                            <a class="dropdown-item" href="03-03-text-colors.html">Text Colours</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!------------------------------------------------------------------------------------------------------------------------------->
+    <div class="container">
+        <div class="pt-5 display-1">Text Colours</div>
+        <div class="display-4">Default Colours</div>
+        <p>The default text colors are shown below. It is not possible to override the settings for these colours unless you utilise the "!important" keyword in the CSS</p>        
+        <div class="mt-2 mb-5 pb-3">
+            <h3 class="text-primary">text-primary &#9632 rgb(21,126,251) &#9632 #157efb</h3>
+            <h3 class="text-secodary">text-secondary &#9632 rgb(108,117,124) &#9632 #6c757c</h3>
+            <h3 class="text-success">text-success &#9632 rgb(48, 166, 74) &#9632 #30a64a</h3>
+            <h3 class="text-danger">text-danger &#9632 rgb(218, 56, 73) &#9632 #da3849</h3>
+            <h3 class="text-warning">text-warning &#9632 rgb(253, 192, 47) &#9632 #fdc02f</h3>
+            <h3 class="text-info">text-info &#9632 rgb(37, 162, 183) &#9632 #25a2b7 </h3>
+            <h3 class="text-dark">text-dark &#9632 rgb(52,58,64) &#9632 #343a40</h3>
+            <h3 class="text-body">text-body &#9632 rgb(34, 37, 41) &#9632 #222529</h3>
+            <h3 class="text-black-50">text-black-50 &#9632 rgb(127,127,127) &#9632 #f7f7f7</h3>
+        </div>
+        <div class="mt-2 mb-5 pb-3 bg-dark">
+            <h3 class="text-light">text-light &#9632 rgb(248,249,250) &#9632 #f8f9fa</h3>
+            <h3 class="text-white-50">text-white-50 &#9632 rgb(154, 157,160) &#9632 #9a9da0</h3>
+            <h3 class="text-white">text-white &#9632 rgb(255, 255, 255) &#9632 #ffffff</h3>
+        </div>
+        <div class="pt-5 display-4">Muted Colours</div>
+        <p>It is also possible to mute the colours using the <strong>text-muted</strong> class.</p>
+        <h3 class="text-primary"><strong>text-primary</strong> &#9632 rgb(21,126,251) &#9632 #157efb</h3>
+        <h3 class="text-primary text-muted"><strong>text-primary</strong> with <strong>text-muted</strong> &#9632 rgb(21,126,251) &#9632 #157efb</h3>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
